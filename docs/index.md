@@ -1,123 +1,52 @@
 ---
 layout: home
 title: MMO
+
+# The whole landing page is driven by this front matter.
+# Markup lives in _layouts/home.html, styling in assets/css/site.css.
+# Keep it short. Long explanations belong on About / FAQ.
+
+hero:
+  eyebrow: A persistent multiplayer RPG experiment
+  title: MMO
+  hook: World first. Story later.
+  lead: No opening novel. No quest rails. One shared world, and everyone in it.
+
+  # Hero media. Drop files in assets/media/ and uncomment what applies:
+  # image: /assets/media/hero.jpg   # screenshot or animated GIF, fills the hero
+  # image_alt: Describe the shot
+  # video: /assets/media/hero.mp4   # muted background loop (image becomes its poster)
+  # embed: https://www.youtube-nocookie.com/embed/VIDEO_ID   # teaser player under the hero
+  placeholder: Footage incoming
+
+  actions:
+    - label: About
+      url: /about.html
+      primary: true
+    - label: Media
+      url: /media.html
+    - label: FAQ
+      url: /faq.html
+
+features_label: The short version
+features:
+  - title: The world is occupied
+    text: NPCs live here. Some of them are hostile. You are allowed to swing first.
+  - title: D&D 5e SRD at the core
+    text: Armor class, hit points, conditions, monsters. Real tabletop rules under the hood.
+  - title: PvP from day one
+    text: Not a future patch. Players can fight players from the first login.
+  - title: Path traced. On the CPU.
+    text: A custom real-time CPU path tracer. Yes, really.
+  - title: Bring your own WoW
+    text: Currently uses assets imported locally from your own WoW installation. None are distributed.
+  - title: 1,000 players. One ASUS.
+    text: The server target is a single machine. Hilariously ambitious. That is the point.
+
+closing:
+  eyebrow: The deal
+  title: Free at first.
+  text: No pay-to-win. Voluntary donations buy one thing. Better servers.
+  label: Read the long version
+  url: /about.html
 ---
-
-<div class="hero">
-  <div class="hero-media">
-    <div class="hero-placeholder">GAME FOOTAGE / SCREENSHOT</div>
-  </div>
-
-  <p class="eyebrow">A persistent multiplayer RPG experiment</p>
-  <h1 class="hero-title">MMO</h1>
-  <p class="hero-lead">Enter the world. No opening novel. No quest rails. Just players, NPCs, danger, and RPG rules.</p>
-
-  <div class="hero-actions">
-    <a class="button primary" href="#the-game">THE GAME</a>
-    <a class="button" href="media.html">MEDIA</a>
-  </div>
-</div>
-
-<section id="the-game" class="marketing-section">
-
-## A WORLD FIRST. A STORY LATER.
-
-MMO starts with the world itself.
-
-NPCs live in it. Some are friendly. Some are hostile. Some can simply be attacked. Players enter the same persistent world and decide what happens next.
-
-There is **no authored story required at the start**. If merely existing in the world with other people is not fun, more quest text will not save it.
-
-</section>
-
-<div class="feature-grid">
-
-<div class="feature-card">
-
-### D&D MEETS MMO
-
-The RPG system is built around **D&D 5e SRD rules and data**: attributes, armor class, hit points, damage, conditions, creatures, abilities and more.
-
-The goal is to support the **full SRD monster set at the data level**, even before every creature has its final visual representation.
-
-</div>
-
-<div class="feature-card">
-
-### PVP FROM DAY ONE
-
-Players can fight players from the beginning.
-
-No waiting for a future battleground patch. PvP is part of the basic world simulation: players can damage players, players can die, and the server is authoritative.
-
-</div>
-
-<div class="feature-card">
-
-### REAL-TIME PATH TRACING
-
-MMO uses a custom **real-time CPU path tracer**.
-
-The renderer, game systems and networking are ours. The GPU stays available for other work.
-
-</div>
-
-<div class="feature-card">
-
-### YOUR WOW INSTALLATION
-
-MMO currently uses assets imported locally from the user's **current World of Warcraft installation**.
-
-Blizzard game assets are not distributed by this project or this repository.
-
-</div>
-
-<div class="feature-card">
-
-### ONE ASUS. 1,000 PLAYERS.
-
-The first server target is delightfully simple:
-
-**1,000 concurrent players on one ASUS machine.**
-
-Interest management, compact replication, small packets, aggressive profiling. Easy. ;)
-
-</div>
-
-<div class="feature-card">
-
-### FREE. FEED THE SERVER.
-
-The initial plan is to make MMO **free to play** and support development with voluntary donations.
-
-No pay-to-win pitch. If you donate, you are helping the poor developer buy better servers.
-
-</div>
-
-</div>
-
-<section class="marketing-section">
-
-## CURRENT PRINCIPLES
-
-- Persistent shared world
-- NPCs before scripted narrative
-- D&D/SRD as the RPG rules layer
-- PvP from the start
-- Server-authoritative simulation
-- Real-time CPU path tracing
-- Local asset import from the user's WoW installation
-- Desktop first
-- Optimize before buying hardware
-
-</section>
-
-<section class="closing-section">
-
-## BUILT IN PUBLIC. PLAYABLE AS SOON AS POSSIBLE.
-
-This repository is the public home for MMO development notes, media and project information.
-
-[ABOUT](about.html){: .button } [MEDIA](media.html){: .button } [FAQ](faq.html){: .button }
-
-</section>

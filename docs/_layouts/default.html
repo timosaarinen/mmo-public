@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- assign page_description = page.description | default: site.description %}
+  <title>{% if page.title and page.title != site.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}{% if page.layout == "home" %} — {{ site.tagline | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page_description | escape }}">
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ page_description | escape }}">
+  {%- assign og_image = page.hero.image | default: site.og_image %}
+  {%- if og_image %}
+  <meta property="og:image" content="{{ og_image | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  {%- endif %}
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body class="{{ page.layout | default: 'page' }}">
+  <header class="site-header">
+    <div class="wrapper site-header__inner">
+      <a class="wordmark" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+      <nav class="site-nav" aria-label="Main">
+        {%- for item in site.nav %}
+        <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title | escape }}</a>
+        {%- endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main>
+{{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper site-footer__inner">
+      <div class="site-footer__top">
+        <span class="wordmark">{{ site.title | escape }}</span>
+        <nav class="site-footer__nav" aria-label="Footer">
+          {%- for item in site.nav %}
+          <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+          {%- endfor %}
+          {%- if site.github_url %}
+          <a href="{{ site.github_url }}">GitHub</a>
+          {%- endif %}
+        </nav>
+      </div>
+      <p class="site-footer__legal">
+        MMO is an independent project. It is not affiliated with, endorsed by, or sponsored by
+        Blizzard Entertainment. No Blizzard assets are distributed here.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

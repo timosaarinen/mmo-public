@@ -1,8 +1,18 @@
 title: MMO
-description: Public documentation and media for MMO
-theme: minima
+tagline: A persistent multiplayer RPG experiment
+description: A persistent multiplayer RPG experiment. World first. Story later.
 
-header_pages:
-  - about.md
-  - media.md
-  - faq.md
+# The site ships its own layouts (_layouts/) and one plain CSS file
+# (assets/css/site.css). No theme, no Sass, no build step.
+
+markdown: kramdown
+
+nav:
+  - title: About
+    url: /about.html
+  - title: Media
+    url: /media.html
+  - title: FAQ
+    url: /faq.html
+
+github_url: https://github.com/timosaarinen/mmo-public

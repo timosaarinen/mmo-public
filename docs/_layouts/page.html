@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="wrapper wrapper--narrow article">
+  <header class="article__header">
+    <p class="eyebrow">{{ site.title | escape }}</p>
+    <h1 class="article__title">{{ page.title | escape }}</h1>
+    {%- if page.lead %}
+    <p class="article__lead">{{ page.lead | escape }}</p>
+    {%- endif %}
+  </header>
+  <div class="prose">
+{{ content }}
+  </div>
+</article>

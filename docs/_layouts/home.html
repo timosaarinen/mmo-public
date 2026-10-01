@@ -1,0 +1,71 @@
+---
+layout: default
+---
+{%- comment -%}
+  Landing page. All copy lives in the front matter of index.md; this file is
+  markup only. Hero media is optional: see the `hero` block in index.md.
+{%- endcomment -%}
+{%- assign hero = page.hero -%}
+<section class="hero">
+  <div class="hero__media">
+    {%- if hero.video %}
+    <video autoplay muted loop playsinline{% if hero.image %} poster="{{ hero.image | relative_url }}"{% endif %}>
+      <source src="{{ hero.video | relative_url }}">
+    </video>
+    {%- elsif hero.image %}
+    <img src="{{ hero.image | relative_url }}" alt="{{ hero.image_alt | default: 'MMO gameplay' | escape }}">
+    {%- else %}
+    <div class="hero__placeholder" aria-hidden="true"></div>
+    {%- endif %}
+  </div>
+  {%- if hero.video or hero.image %}
+  <div class="hero__scrim" aria-hidden="true"></div>
+  {%- endif %}
+
+  <div class="wrapper hero__inner">
+    {%- unless hero.video or hero.image %}
+    <p class="hero__tag">{{ hero.placeholder | escape }}</p>
+    {%- endunless %}
+
+    <div class="hero__content">
+      <p class="eyebrow">{{ hero.eyebrow | escape }}</p>
+      <h1 class="hero__title">{{ hero.title | default: site.title | escape }}</h1>
+      <p class="hero__hook">{{ hero.hook | escape }}</p>
+      <p class="hero__lead">{{ hero.lead | escape }}</p>
+      <div class="actions">
+        {%- for action in hero.actions %}
+        <a class="button{% if action.primary %} button--primary{% endif %}" href="{{ action.url | relative_url }}">{{ action.label | escape }}</a>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- if hero.embed %}
+<section class="wrapper teaser">
+  <div class="teaser__frame">
+    <iframe src="{{ hero.embed }}" title="MMO teaser" loading="lazy"
+            allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+  </div>
+</section>
+{%- endif %}
+
+<section class="wrapper features">
+  <p class="eyebrow">{{ page.features_label | escape }}</p>
+  <ol class="feature-grid">
+    {%- for feature in page.features %}
+    <li class="feature">
+      <h2 class="feature__title">{{ feature.title | escape }}</h2>
+      <p class="feature__text">{{ feature.text | escape }}</p>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+{%- assign closing = page.closing -%}
+<section class="wrapper closing">
+  <p class="eyebrow">{{ closing.eyebrow | escape }}</p>
+  <h2 class="closing__title">{{ closing.title | escape }}</h2>
+  <p class="closing__text">{{ closing.text | escape }}</p>
+  <a class="text-link" href="{{ closing.url | relative_url }}">{{ closing.label | escape }}</a>
+</section>
