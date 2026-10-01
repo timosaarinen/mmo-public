@@ -1,9 +1,25 @@
 ---
 layout: page
 title: FAQ
+description: Short answers about MMO.
+lead: Short answers. The long ones are on the About page.
 ---
 
-# FAQ
+## What is MMO?
+
+A persistent multiplayer RPG experiment. One shared world, NPCs that live in it, and D&D 5e SRD rules underneath. See [About](about.html).
+
+## Is there a story?
+
+Not at the start. World first, story later.
+
+## Is there PvP?
+
+Yes, from day one.
+
+## What does it cost?
+
+The initial plan is free to play, supported by voluntary donations. Donations help pay for better servers.
 
 ## Is MMO open source?
 
