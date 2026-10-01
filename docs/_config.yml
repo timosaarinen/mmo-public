@@ -1,0 +1,8 @@
+title: MMO
+description: Public documentation and media for MMO
+theme: minima
+
+header_pages:
+  - about.md
+  - media.md
+  - faq.md
