@@ -37,6 +37,14 @@ MMO currently uses assets imported locally from the user's **current World of Wa
 
 Blizzard game assets are not distributed by this project and are not stored in this repository.
 
+## Bring your own agent
+
+MMO is being designed around **bring your own agent (BYOA)**. Your own AI agent, whichever one you already use, will be able to install, configure and troubleshoot the game for you by following the game's own guide and tools. No wrestling with command lines or settings menus. The agent runs on your machine under your own subscription, and you can always follow the same steps by hand.
+
+Your agent looks after your setup, not the world. **World changes are handled by our server**, which stays authoritative for everyone.
+
+This is planned and not available yet.
+
 ## One ASUS, 1,000 players
 
 The first server target is delightfully simple: **1,000 concurrent players on one ASUS machine.**
@@ -58,6 +66,7 @@ No pay-to-win pitch. If you donate, you are helping the poor developer buy bette
 - Server-authoritative simulation
 - Real-time CPU path tracing
 - Local asset import from the user's WoW installation
+- Bring your own agent (BYOA) for install, settings and troubleshooting
 - Desktop first
 - Optimize before buying hardware
 

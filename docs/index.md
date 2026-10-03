@@ -40,6 +40,8 @@ features:
     text: A custom real-time CPU path tracer. Yes, really.
   - title: Bring your own WoW
     text: Currently uses assets imported locally from your own WoW installation. None are distributed.
+  - title: Bring your own agent
+    text: Install, settings and fixes are designed around the AI agent you already use. It works on your machine. World changes are handled by our server.
   - title: 1,000 players. One ASUS.
     text: The server target is a single machine. Hilariously ambitious. That is the point.
 
