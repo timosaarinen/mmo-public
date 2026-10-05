@@ -2,13 +2,16 @@
 
 Public documentation, media, and project pages for **MMO**.
 
+**Live site:** https://timosaarinen.github.io/mmo-public/
+
 The game itself is developed separately. This repository is for public-facing material only.
 
-## Links
+## Live pages
 
-- [About](docs/about.md)
-- [Media](docs/media.md)
-- [FAQ](docs/faq.md)
+- [Home](https://timosaarinen.github.io/mmo-public/)
+- [About](https://timosaarinen.github.io/mmo-public/about.html)
+- [Media](https://timosaarinen.github.io/mmo-public/media.html)
+- [FAQ](https://timosaarinen.github.io/mmo-public/faq.html)
 
 ## Editing the site
 
